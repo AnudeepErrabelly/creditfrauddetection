@@ -1,1 +1,1 @@
-web: gunicorn creditfraudetection:app
+web: gunicorn app:app
