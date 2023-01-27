@@ -29,5 +29,5 @@ def predict():
     #, pred = 'Your Transaction  might be a safer one.\n Probability of fire occuring is {}'.format(output), bhai = "Your Forest is Safe for now")
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=port)
+    app.run(debug=True)
 
