@@ -1,7 +1,9 @@
 from flask import Flask, request, url_for, redirect, render_template
 import pickle
 import numpy as np
-
+import os from pml
+import app
+port = int(os.environ.get('PORT', 5000))
 app = Flask(__name__)
 
 model = pickle.load(open('model.pkl', 'rb'))
@@ -27,4 +29,5 @@ def predict():
     #, pred = 'Your Transaction  might be a safer one.\n Probability of fire occuring is {}'.format(output), bhai = "Your Forest is Safe for now")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=port)
+
